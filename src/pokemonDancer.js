@@ -10,3 +10,16 @@ var makePokemonDancer = function(top, left, timeBetweenSteps) {
 
 makePokemonDancer.prototype = Object.create(makeDancer.prototype);
 makePokemonDancer.prototype.constructor = makePokemonDancer;
+
+// makePokemonDancer.prototype.lineUp = function(order) {
+
+// };
+
+makePokemonDancer.prototype.setPosition = function() {
+  var styleSettings = {
+    top: this.top,
+    left: this.left,
+    position: 'absolute'
+  };
+  this.$node.css(styleSettings);
+};

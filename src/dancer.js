@@ -1,3 +1,5 @@
+var colors = ['red', 'yellow', 'orange', 'blue', 'green', 'purple', 'pink'];
+
 // Creates and returns a new dancer object that can step
 var makeDancer = function(top, left, timeBetweenSteps) {
 
@@ -33,6 +35,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = $('<span class="dancer"></span>');
+  this.color = colors[Math.floor(Math.random() * colors.length)];
   this.setPosition();
 };
 
@@ -44,11 +47,15 @@ makeDancer.prototype.setPosition = function() {
   var styleSettings = {
     top: this.top,
     left: this.left,
-    position: 'absolute'
+    position: 'absolute',
+    "background-color": this.color
   };
   this.$node.css(styleSettings);
 };
 
+makeDancer.prototype.lineUp = function(row, col) {
+  this.$node.animate({ top: (30 + (100 * row)) + 'px', left: col + 'px'}, 2000);
+};
 
 
 
