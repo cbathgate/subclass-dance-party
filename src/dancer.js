@@ -43,7 +43,8 @@ makeDancer.prototype.step = function() {
 makeDancer.prototype.setPosition = function() {
   var styleSettings = {
     top: this.top,
-    left: this.left
+    left: this.left,
+    position: 'absolute'
   };
   this.$node.css(styleSettings);
 };
