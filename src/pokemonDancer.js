@@ -3,7 +3,7 @@ var makePokemonDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.name = pokemonList[Math.floor(Math.random() * pokemonList.length)];
   var path = './lib/pokemon/' + this.name + '.gif';
-  var img = '<span><img class= "pokemon" src= "' + path + '"></span>';
+  var img = '<span><img class= "pokemon dancer" src= "' + path + '"></span>';
   this.$node = $(img);
   this.setPosition();
 };

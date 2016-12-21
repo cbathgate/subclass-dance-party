@@ -44,5 +44,15 @@ $(document).ready(function() {
     }
   });
 
+  $('body').on('mouseover', '.dancer', function(event) {
+    var $this = $(this);
+    if ($this.hasClass('pokemon') ) {
+      $this.animate({width: '200px'});
+    }
+    if ($this.hasClass('simple')) {
+      $this.animate({width: '100px', height: '100px', 'border-radius': '50px'});
+    }
+  });
+
 });
 

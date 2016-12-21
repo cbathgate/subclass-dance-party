@@ -34,7 +34,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.top = top;
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
-  this.$node = $('<span class="dancer"></span>');
+  this.$node = $('<span class="dancer simple"></span>');
   this.color = colors[Math.floor(Math.random() * colors.length)];
   this.setPosition();
 };
